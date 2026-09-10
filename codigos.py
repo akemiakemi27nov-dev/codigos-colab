@@ -195,7 +195,14 @@ print(df.head())
 # Cuántos de cada producto
 print(df["producto"].value_counts())
 ''',
-
+    "guardar":'''
+# 3. Guardar dataset limpio en condicion_tela
+df_limpio_condicion = df.copy()
+ #Guardar en excel
+df_limpio_condicion.to_excel("tela_tenido_limpio_condicion.xlsx", index=False)
+import pandas as pd
+df = pd.read_excel("tela_tenido_s_sucio.xlsx")
+''',
 
 }
 
